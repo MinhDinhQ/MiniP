@@ -1,8 +1,8 @@
 ﻿@page "/post/{id}"
-
 @using kreddit_app.Data;
 @using shared.Model;
 @inject ApiService apiService
+@inject NavigationManager Navigation;
 
 <PageTitle>Kreddit</PageTitle>
 
@@ -56,7 +56,10 @@ else
         }
     </div>
 
-    <CreateComment PostId="@PostId" OnCommentCreated="HandleNewComment"></CreateComment>
+    <CreateComment PostId="@PostId"></CreateComment>
+    
+    <!-- Home button to navigate back to the homepage -->
+    <button @onclick="NavigateToHome">Go to Home</button>  <!-- Home button -->
 }
 
 @code {
@@ -98,13 +101,8 @@ else
         Console.WriteLine("Not implemented 😪");
     }
 
-    // Metode til at håndtere en ny kommentar, som bliver sendt fra CreateComment component
-    private void HandleNewComment(Comment newComment)
+    private void NavigateToHome()
     {
-        if (Post != null)
-        {
-            Post.Comments.Add(newComment);  // Tilføj den nye kommentar til listen
-            StateHasChanged();  // Tving Blazor til at opdatere UI'et
-        }
+        Navigation.NavigateTo("/");
     }
 }

@@ -2,6 +2,7 @@
 @using kreddit_app.Data
 @using shared.Model
 @inject ApiService apiService
+@inject NavigationManager Navigation;
 
 <div>
     <br />
@@ -34,5 +35,10 @@
         {
             await OnCommentCreated.InvokeAsync(newComment);
         }
+    }
+
+    private void NavigateToHome()
+    {
+        Navigation.NavigateTo("/");
     }
 }

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "VMhn8dm3u0dEaSWcrL2lEAY+rKF2qmXqX+9Pxrbsn6g=",
+  "Hash": "ZKF6q5h2Oj+AQOS3s7RWhVdvEUxwZnq5hbGRXPWHlZc=",
   "Source": "Mini-Projekt",
   "BasePath": "_content/Mini-Projekt",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

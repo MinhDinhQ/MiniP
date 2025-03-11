@@ -2506,8 +2506,8 @@ C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\BlazorApp1.
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\refint\BlazorApp1.dll
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\BlazorApp1.pdb
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\ref\BlazorApp1.dll
-C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\p56w2bt1fm-mn0p1sbkei.gz
-C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\bey0qyhru7-2ut7dcqwbe.gz
-C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\zar4mxn1lj-ctvp26ubeh.gz
-C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\kyjy2iuvp1-skszta7sfn.gz
-C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\5jzqasczcu-0rv9h7ai2o.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\p56w2bt1fm-zp8vi5dbdz.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\bey0qyhru7-x9trq2fhv0.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\zar4mxn1lj-t287npafvv.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\kyjy2iuvp1-eo6hga5lxe.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\5jzqasczcu-frigmxrbp3.gz

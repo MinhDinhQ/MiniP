@@ -56,8 +56,7 @@ else
         }
     </div>
 
-    <!-- Here we are passing the PostId as a parameter to the CreateComment component -->
-    <CreateComment PostId="@PostId"></CreateComment>
+    <CreateComment PostId="@PostId" OnCommentCreated="HandleNewComment"></CreateComment>
 }
 
 @code {
@@ -97,5 +96,15 @@ else
     private async void Downvote(int id)
     {
         Console.WriteLine("Not implemented 😪");
+    }
+
+    // Metode til at håndtere en ny kommentar, som bliver sendt fra CreateComment component
+    private void HandleNewComment(Comment newComment)
+    {
+        if (Post != null)
+        {
+            Post.Comments.Add(newComment);  // Tilføj den nye kommentar til listen
+            StateHasChanged();  // Tving Blazor til at opdatere UI'et
+        }
     }
 }

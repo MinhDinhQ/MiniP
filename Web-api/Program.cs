@@ -4,41 +4,47 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using shared.Model;
 using API.Server;
+using Microsoft.AspNetCore.Http.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ** Add CORS Policy **
+// ** Add services to the container. **
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Add DbContext for RedditDbContext
+builder.Services.AddDbContext<RedditDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))); // SQLite connection string
+
+// Configure CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorOrigin", policy =>
     {
-        policy.WithOrigins("http://localhost:7228")  
+        policy.WithOrigins("http://localhost:7228")  // Blazor client address
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
-// ** Add services to the container. **
-builder.Services.AddDbContext<RedditDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));  // Use SQLite connection string
-
+// Configure JSON options to avoid circular references
+builder.Services.Configure<JsonOptions>(options =>
+{
+    options.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 
 var app = builder.Build();
 
-// ** Configure the HTTP request pipeline. **
-if (app.Environment.IsDevelopment())
+// Use CORS policy
+app.UseCors("AllowBlazorOrigin");
+
+app.Use(async (context, next) =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    context.Response.ContentType = "application/json; charset=utf-8";
+    await next(context);
+});
 
-// Enable CORS
-app.UseCors("AllowSpecificOrigin");
-
-// Use HTTPS Redirection
-app.UseHttpsRedirection();
-
-// Configure the API routes (using Minimal API)
+// Define API routes (Minimal API)
 app.MapGet("/posts", async (RedditDbContext db) =>
 {
     var posts = await db.Posts
@@ -123,5 +129,13 @@ app.MapPost("/comments/{id}/downvote", async (int id, RedditDbContext db) =>
     return Results.Ok(comment);
 });
 
-// ** Run the application **
+// ** Configure the HTTP request pipeline. **
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
 app.Run();

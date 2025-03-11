@@ -1,6 +1,5 @@
 using System.Net.Http.Json;
 using System.Text.Json;
-using Microsoft.Extensions.Configuration;
 using shared.Model;
 
 namespace kreddit_app.Data;
@@ -30,22 +29,16 @@ public class ApiService
         try
         {
             string url = $"{_baseAPI}posts/";
-
-            HttpResponseMessage response = await _http.GetAsync(url);
-
-            // Tjek hvad der er i responsen
-            string responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseContent);  // Her kan du tjekke hvad API'en sender tilbage
+            var response = await _http.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
-                // Deserialize the response into Post[] if successful
-                return JsonSerializer.Deserialize<Post[]>(responseContent);
+                return await response.Content.ReadFromJsonAsync<Post[]>();
             }
-
-            // If not successful, return an empty array or handle the error
-            Console.WriteLine($"Error fetching posts. Status code: {response.StatusCode}");
-            return Array.Empty<Post>();
+            else
+            {
+                throw new Exception("Error fetching posts.");
+            }
         }
         catch (Exception ex)
         {
@@ -55,11 +48,11 @@ public class ApiService
     }
 
     // Get a specific post by ID
-    public async Task<Post> GetPost(int id)
+    public async Task<Post?> GetPost(int id)
     {
         try
         {
-            string url = $"{_baseAPI}posts/{id}"; // URL for a specific post
+            string url = $"{_baseAPI}posts/{id}"; 
             return await _http.GetFromJsonAsync<Post>(url);
         }
         catch (Exception ex)
@@ -79,16 +72,15 @@ public class ApiService
             // Send the comment data as JSON
             HttpResponseMessage msg = await _http.PostAsJsonAsync(url, new { Content = content, PostId = postId, Username = username });
 
-            // Read the JSON string from the response
-            string json = await msg.Content.ReadAsStringAsync();
-
-            // Deserialize the response into a Comment object
-            Comment? newComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
+            // Check response
+            if (msg.IsSuccessStatusCode)
             {
-                PropertyNameCaseInsensitive = true  // Ignore case when matching JSON properties to C# properties
-            });
-
-            return newComment;
+                return await msg.Content.ReadFromJsonAsync<Comment>();
+            }
+            else
+            {
+                throw new Exception("Error creating comment");
+            }
         }
         catch (Exception ex)
         {
@@ -102,21 +94,17 @@ public class ApiService
     {
         try
         {
-            string url = $"{_baseAPI}posts/{id}/upvote";  // URL for upvoting a post
-
-            // Send a POST request to upvote the post
+            string url = $"{_baseAPI}posts/{id}/upvote";  
             HttpResponseMessage msg = await _http.PostAsJsonAsync(url, "");
 
-            // Read the JSON string from the response
-            string json = await msg.Content.ReadAsStringAsync();
-
-            // Deserialize the JSON response into a Post object
-            Post? updatedPost = JsonSerializer.Deserialize<Post>(json, new JsonSerializerOptions
+            if (msg.IsSuccessStatusCode)
             {
-                PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
-            });
-
-            return updatedPost;
+                return await msg.Content.ReadFromJsonAsync<Post>();
+            }
+            else
+            {
+                throw new Exception($"Error upvoting post {id}");
+            }
         }
         catch (Exception ex)
         {
@@ -130,21 +118,9 @@ public class ApiService
     {
         try
         {
-            string url = $"{_baseAPI}posts/{id}/downvote";  // URL for downvoting a post
-
-            // Send a POST request to downvote the post
-            HttpResponseMessage msg = await _http.PostAsJsonAsync(url, "");
-
-            // Read the JSON string from the response
-            string json = await msg.Content.ReadAsStringAsync();
-
-            // Deserialize the JSON response into a Post object
-            Post? updatedPost = JsonSerializer.Deserialize<Post>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
-            });
-
-            return updatedPost;
+            string url = $"{_baseAPI}posts/{id}/downvote";  
+            var response = await _http.PostAsJsonAsync(url, "");
+            return await response.Content.ReadFromJsonAsync<Post>();
         }
         catch (Exception ex)
         {
@@ -153,59 +129,25 @@ public class ApiService
         }
     }
 
-    // Upvote a comment
-    public async Task<Comment> UpvoteComment(int id)
+    // Login user
+    public async Task<User> Login(string username)
     {
         try
         {
-            string url = $"{_baseAPI}comments/{id}/upvote";  // URL for upvoting a comment
-
-            // Send a POST request to upvote the comment
-            HttpResponseMessage msg = await _http.PostAsJsonAsync(url, "");
-
-            // Read the JSON string from the response
-            string json = await msg.Content.ReadAsStringAsync();
-
-            // Deserialize the JSON response into a Comment object
-            Comment? updatedComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
+            var response = await _http.PostAsJsonAsync($"{_baseAPI}users/{username}/", "");
+            if (response.IsSuccessStatusCode)
             {
-                PropertyNameCaseInsensitive = true
-            });
-
-            return updatedComment;
+                return await response.Content.ReadFromJsonAsync<User>();
+            }
+            else
+            {
+                throw new Exception("Login failed");
+            }
         }
         catch (Exception ex)
         {
-            LogError($"Error upvoting comment {id}", ex);
-            throw new ApplicationException($"Error upvoting comment {id}: {ex.Message}", ex);
-        }
-    }
-
-    // Downvote a comment
-    public async Task<Comment> DownvoteComment(int id)
-    {
-        try
-        {
-            string url = $"{_baseAPI}comments/{id}/downvote";  // URL for downvoting a comment
-
-            // Send a POST request to downvote the comment
-            HttpResponseMessage msg = await _http.PostAsJsonAsync(url, "");
-
-            // Read the JSON string from the response
-            string json = await msg.Content.ReadAsStringAsync();
-
-            // Deserialize the JSON response into a Comment object
-            Comment? updatedComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
-
-            return updatedComment;
-        }
-        catch (Exception ex)
-        {
-            LogError($"Error downvoting comment {id}", ex);
-            throw new ApplicationException($"Error downvoting comment {id}: {ex.Message}", ex);
+            LogError($"Error logging in user {username}", ex);
+            throw new ApplicationException($"Error logging in user {username}: {ex.Message}", ex);
         }
     }
 }

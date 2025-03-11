@@ -3,35 +3,101 @@
 @using shared.Model
 @inject ApiService apiService
 
+<a href="/createpost" class="btn btn-primary mt-3" style="width: 100%;" >Opret Post</a>
+
+<br/>
+
 @if (posts == null)
 {
-    <p><em>Loading...</em></p>
+    <p class="loading">Loading...</p>
 }
 else
 {
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Votes</th>
-        </tr>
+    <div class="post-container">
         @foreach (var post in posts)
         {
-            <tr>
-               
-                <td><a href="/post/@post.Id">@post.Title</a></td>
-                <td>@post.Content</td>
-                <td>@(post.Upvotes - post.Downvotes)</td>
-                <td>
-                    <button @onclick="() => Upvote(post.Id)">Upvote</button>
-                    <button @onclick="() => Downvote(post.Id)">Downvote</button>
-                </td>
-            </tr>
+            <div class="post-item">
+                <a href="/post/@post.Id" class="post-title">@post.Title</a>
+                <p class="post-content">@post.Content</p>
+                <div class="post-actions">
+                    <span class="post-votes">@(post.Upvotes - post.Downvotes) votes</span>
+                    <button class="vote-button upvote" @onclick="() => Upvote(post.Id)">▲</button>
+                    <button class="vote-button downvote" @onclick="() => Downvote(post.Id)">▼</button>
+                </div>
+            </div>
         }
-    </table>
-
-    <br/>
+    </div>
 }
+
+<style>
+    .post-container {
+        max-width: 100%px;
+        margin: auto;
+        font-family: Arial, sans-serif;
+        color: #222;
+        background: #f8f8f8;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .post-item {
+        background: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    .post-title:hover {
+        text-decoration: underline;
+    }
+
+    .post-content {
+        font-size: 14px;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .post-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .post-votes {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .vote-button {
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .upvote {
+        color: rgb(53, 114, 53);
+    }
+
+    .downvote {
+        color: rgba(9, 9, 9, 0.769);
+    }
+
+    .loading {
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+    }
+</style>
 
 @code {
     private Post[]? posts;
@@ -43,34 +109,28 @@ else
 
     private async void Upvote(int id)
     {
-   
         var updatedPost = await apiService.UpvotePost(id);
-
         var post = posts?.FirstOrDefault(p => p.Id == id);
         if (post != null)
         {
-            post.Upvotes = updatedPost.Upvotes; 
+            post.Upvotes = updatedPost.Upvotes;
         }
     }
 
-  private async void Downvote(int id)
-{
-    try
+    private async void Downvote(int id)
     {
-        
-        var updatedPost = await apiService.DownvotePost(id);
-
-       
-        var post = posts?.FirstOrDefault(p => p.Id == id);
-        if (post != null)
+        try
         {
-            post.Downvotes = updatedPost.Downvotes; 
+            var updatedPost = await apiService.DownvotePost(id);
+            var post = posts?.FirstOrDefault(p => p.Id == id);
+            if (post != null)
+            {
+                post.Downvotes = updatedPost.Downvotes;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error downvoting post {id}: {ex.Message}");
         }
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error downvoting post {id}: {ex.Message}");
-    }
-}
-
 }

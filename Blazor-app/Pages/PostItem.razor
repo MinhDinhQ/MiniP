@@ -44,8 +44,8 @@ else
                         <td>@comment.User.Username</td>
                         <td>@comment.Content</td>
                         <td>@(comment.Upvotes - comment.Downvotes)</td>
-                        <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
-                        <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
+                        <td><button @onclick="() => UpvoteComment(comment.Id)">Upvote</button></td>
+                        <td><button @onclick="() => DownvoteComment(comment.Id)">Downvote</button></td>
                     </tr>
                 }
             </table>
@@ -56,7 +56,7 @@ else
         }
     </div>
 
-    <CreateComment PostId="@PostId" OnCommentCreated="HandleCommentCreated"></CreateComment>
+    <CreateComment PostId="@PostId"></CreateComment>
     
     <!-- Home button to navigate back to the homepage -->
     <button @onclick="NavigateToHome">Go to Home</button>  <!-- Home button -->
@@ -90,28 +90,30 @@ else
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
-
-    private async void Upvote(int id)
+private async Task UpvoteComment(int id)
+{
+    var updatedComment = await apiService.UpvoteComment(id);
+    
+    var comment = Post.Comments.FirstOrDefault(c => c.Id == id);
+    if (comment != null)
     {
-        Console.WriteLine("Not implemented 😪");
+        comment.Upvotes = updatedComment.Upvotes; // Update upvote count
     }
+}
 
-    private async void Downvote(int id)
+private async Task DownvoteComment(int id)
+{
+    var updatedComment = await apiService.DownvoteComment(id);
+    
+    var comment = Post.Comments.FirstOrDefault(c => c.Id == id);
+    if (comment != null)
     {
-        Console.WriteLine("Not implemented 😪");
+        comment.Downvotes = updatedComment.Downvotes; // Update downvote count
     }
+}
 
     private void NavigateToHome()
     {
         Navigation.NavigateTo("/");
-    }
-
-    // Denne metode håndterer den nye kommentar og opdaterer kommentarlisten
-    private void HandleCommentCreated(Comment newComment)
-    {
-        if (Post != null && Post.Comments != null)
-        {
-            Post.Comments.Add(newComment);  // Tilføj den nye kommentar til listen
-        }
     }
 }

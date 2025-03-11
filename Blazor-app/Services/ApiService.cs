@@ -177,20 +177,76 @@ public async Task<List<Comment>> GetCommentsForPost(int postId)
     }
 
     // Downvote a post
-    public async Task<Post> DownvotePost(int id)
+   public async Task<Post> DownvotePost(int id)
+{
+    try
     {
-        try
+        string url = $"{_baseAPI}posts/{id}/downvote";    // Adjusted URL if needed
+       var response = await _http.PostAsJsonAsync(url, "");
+
+
+        if (response.IsSuccessStatusCode)
         {
-            string url = $"{_baseAPI}posts/{id}/downvote";  
-            var response = await _http.PostAsJsonAsync(url, "");
-            return await response.Content.ReadFromJsonAsync<Post>();
+            return await response.Content.ReadFromJsonAsync<Post>() ?? new Post();
         }
-        catch (Exception ex)
+        else
         {
-            LogError($"Error downvoting post {id}", ex);
-            throw new ApplicationException($"Error downvoting post {id}: {ex.Message}", ex);
+            throw new Exception($"Error downvoting post {id}: {response.ReasonPhrase}");
         }
     }
+    catch (Exception ex)
+    {
+        LogError($"Error downvoting post {id}", ex);
+        throw new ApplicationException($"Error downvoting post {id}: {ex.Message}", ex);
+    }
+}
+
+public async Task<Comment> UpvoteComment(int id)
+{
+    try
+    {
+        string url = $"{_baseAPI}comments/{id}/upvote";  
+        HttpResponseMessage response = await _http.PostAsJsonAsync(url, "");
+
+        if (response.IsSuccessStatusCode)
+        {
+            return await response.Content.ReadFromJsonAsync<Comment>();
+        }
+        else
+        {
+            throw new Exception($"Error upvoting comment {id}");
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError($"Error upvoting comment {id}", ex);
+        throw new ApplicationException($"Error upvoting comment {id}: {ex.Message}", ex);
+    }
+}
+
+public async Task<Comment> DownvoteComment(int id)
+{
+    try
+    {
+        string url = $"{_baseAPI}comments/{id}/downvote";  
+        HttpResponseMessage response = await _http.PostAsJsonAsync(url, "");
+
+        if (response.IsSuccessStatusCode)
+        {
+            return await response.Content.ReadFromJsonAsync<Comment>();
+        }
+        else
+        {
+            throw new Exception($"Error downvoting comment {id}");
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError($"Error downvoting comment {id}", ex);
+        throw new ApplicationException($"Error downvoting comment {id}: {ex.Message}", ex);
+    }
+}
+
 
 
 }

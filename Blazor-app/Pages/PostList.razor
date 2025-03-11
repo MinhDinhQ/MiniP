@@ -46,7 +46,7 @@ else
     {
         // Opdater posten med upvote
         var updatedPost = await apiService.UpvotePost(id);
-        
+
         // Opdater den specifikke post i posts arrayet
         var post = posts?.FirstOrDefault(p => p.Id == id);
         if (post != null)
@@ -55,9 +55,24 @@ else
         }
     }
 
-    private async void Downvote(int id)
+  private async void Downvote(int id)
+{
+    try
     {
-        // Implementer nedstemning her (skal bruge en metode fra APIService)
-        Console.WriteLine("Downvote feature is not implemented yet.");
+        // Call API to downvote the post
+        var updatedPost = await apiService.DownvotePost(id);
+
+        // Update the specific post in the posts list
+        var post = posts?.FirstOrDefault(p => p.Id == id);
+        if (post != null)
+        {
+            post.Downvotes = updatedPost.Downvotes; // Update downvotes count
+        }
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error downvoting post {id}: {ex.Message}");
+    }
+}
+
 }

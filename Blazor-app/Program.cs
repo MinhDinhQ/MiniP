@@ -9,9 +9,9 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 // Tilføj HttpClient som scoped service
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["BaseApiUrl"] ?? "http://localhost:5283/") });
 
-// Registrer ApiService som scoped, singleton eller transient
+// Registrer ApiService som scoped
 builder.Services.AddScoped<ApiService>();  
 
 await builder.Build().RunAsync();

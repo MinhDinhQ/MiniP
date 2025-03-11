@@ -1,0 +1,53 @@
+@page "/createpost"
+@using kreddit_app.Data
+@using shared.Model
+@inject ApiService apiService
+
+<PageTitle>Create a Post</PageTitle>
+
+<h3>Create a New Post</h3>
+
+<EditForm Model="@newPost" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <InputText id="title" class="form-control" @bind-Value="newPost.Title" />
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <InputTextArea id="content" class="form-control" @bind-Value="newPost.Content" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Post</button>
+</EditForm>
+
+@if (isPostCreated)
+{
+    <div class="alert alert-success mt-3">
+        <strong>Success!</strong> Your post was created successfully.
+    </div>
+}
+
+@code {
+    private Post newPost = new Post();
+    private bool isPostCreated = false;
+
+    // Method called on form submission when the form is valid
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var createdPost = await apiService.CreatePost(newPost); // Create the post via ApiService
+            isPostCreated = true;
+            // Optionally redirect to another page, e.g., home or post details
+            // NavigationManager.NavigateTo("/");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating post: {ex.Message}");
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+Nkhw1cAiKkiiMG2OB1kt5KaL37nu5EzdWpOrlVvmak=",
+  "Hash": "bJn/L/Sx7mAGFO2hECEnjlurrlLS3xtkaGqCkChyVaU=",
   "Source": "Mini-Projekt",
   "BasePath": "_content/Mini-Projekt",
   "Mode": "Default",
@@ -43,8 +43,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "jlf425vyae",
-      "Integrity": "CfKqG82QFfXL+Q2mXLCnEWxCJgLJ+RXoP92YSamL1wk=",
+      "Fingerprint": "xda65f1fj2",
+      "Integrity": "6/SLGzMcRZzSvKMFSp4kqMuQHGRFH1GUD0VDTdFTpS4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -85,8 +85,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "n0iib8ly62",
-      "Integrity": "SfmEGglCaQmGbiyyrDzO9FnUBS43+Q2kS/HaBAlb0rg=",
+      "Fingerprint": "z9ugt1wkud",
+      "Integrity": "R95eEGyIbdAWgdKb607d/DNzHDECvdZuMzKG6zVShUI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BlazorApp1.dll"
@@ -106,8 +106,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "ly100clrvt",
-      "Integrity": "EzZQ9axnj5uVCHH+XSmb2Fq37ZexsWDi5P4DplyA1oI=",
+      "Fingerprint": "tctmsaasoh",
+      "Integrity": "4x22c40Zqn/qzpIkM5GmSvGi0EJlQcFda53a8hxeVJs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BlazorApp1.pdb"
@@ -883,8 +883,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "jxnywgpxyd",
-      "Integrity": "WSJURMh14Dfdt6ebft4zL/lKYg9nlF2FICLnVaF8DPc=",
+      "Fingerprint": "tpluri3rhl",
+      "Integrity": "cTz8TIt3di9QUFUNVWUE9cRvMcbnAey3S6I3YhL1fQA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\shared.dll"
@@ -904,8 +904,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "t4t312pufv",
-      "Integrity": "w1DvBZlpt5TfMrgC+tkyNbb4qKH80z27TkhyI0uJjEU=",
+      "Fingerprint": "kzht7fre70",
+      "Integrity": "sMzSKryhazXxqNsMbKw8cKc86uRKzaex4obCWAdzneI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\shared.pdb"
@@ -4880,7 +4880,7 @@
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5fi019hzed-yqeyyxiz76.gz"
     },
     {
-      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-jlf425vyae.gz",
+      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-xda65f1fj2.gz",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\",
@@ -4894,11 +4894,11 @@
       "RelatedAsset": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vlpbakfejs",
-      "Integrity": "Y+CJwDZ4ChpRW1NNiz434SQGUz2dK7hlQY7fQupJjPo=",
+      "Fingerprint": "78my0tqfvc",
+      "Integrity": "B5mZWXJDguc1tRn4lJoaveTZ+MKDPY0pPb0RDj2bh3A=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-jlf425vyae.gz"
+      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-xda65f1fj2.gz"
     },
     {
       "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5l9wxxtzlc-kgsrsmpsbr.gz",
@@ -5825,7 +5825,7 @@
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bdp8iik6f6-5vwfddg8g5.gz"
     },
     {
-      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-t4t312pufv.gz",
+      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-kzht7fre70.gz",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\",
@@ -5839,11 +5839,11 @@
       "RelatedAsset": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "58l51xdw7x",
-      "Integrity": "tY/DK2gCx4J/zPwmwB8CNYC7foG1ntC3Vmm3uQzRO4U=",
+      "Fingerprint": "qlml2ugxir",
+      "Integrity": "UuAIEkt4813tPjYXuyrkOclEO2mya1TP+27hC4CWTKc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-t4t312pufv.gz"
+      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-kzht7fre70.gz"
     },
     {
       "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bhp7bc82kn-dj1yoma6fr.gz",
@@ -6875,7 +6875,7 @@
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kp8s527mfw-tj2pkmsvh4.gz"
     },
     {
-      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-ly100clrvt.gz",
+      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-tctmsaasoh.gz",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\",
@@ -6889,11 +6889,11 @@
       "RelatedAsset": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BlazorApp1.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "83hdep1yra",
-      "Integrity": "xPnAhVsfErxrjhRQXSYqEUaqTrCi3KOCSzGq3SfNpAY=",
+      "Fingerprint": "bvlf35wmom",
+      "Integrity": "d7M4OHbzWEYVwVT3WXqd1jWW9JrgqdXG1dzuan04oEU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-ly100clrvt.gz"
+      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-tctmsaasoh.gz"
     },
     {
       "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\l7qbpng0n7-48aweybv4d.gz",
@@ -7295,7 +7295,7 @@
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\om5lg0l4st-7rlgq1jzhn.gz"
     },
     {
-      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-jxnywgpxyd.gz",
+      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-tpluri3rhl.gz",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\",
@@ -7309,11 +7309,11 @@
       "RelatedAsset": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\shared.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jel3x92qu3",
-      "Integrity": "5UtljDXKPk+X/iKMdv5ZDtSpVMsaTOOqRTzWp4zRkOU=",
+      "Fingerprint": "dnyfi5oh0l",
+      "Integrity": "KaPdZtsVHNNpj1VlAr52wXe5UI8eEDoE8SQI2sBBTJM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-jxnywgpxyd.gz"
+      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-tpluri3rhl.gz"
     },
     {
       "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\pow0qejexf-ofahbp17fk.gz",
@@ -8534,7 +8534,7 @@
       "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\z7ixj45mno-9zqro3rcxh.gz"
     },
     {
-      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-n0iib8ly62.gz",
+      "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-z9ugt1wkud.gz",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\",
@@ -8548,11 +8548,11 @@
       "RelatedAsset": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BlazorApp1.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "h6u4swgfgl",
-      "Integrity": "yU2gC06z7dtV45VYtgOcWacdM9kzCElSG8kYmMD0Qb4=",
+      "Fingerprint": "cn9z0lvtal",
+      "Integrity": "aEB53ohkyRP8vT+zGcxkcou9CgPX6p3q1OnlmT26J7s=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-n0iib8ly62.gz"
+      "OriginalItemSpec": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-z9ugt1wkud.gz"
     },
     {
       "Identity": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zf7iop9cmp-y4n5e3hx86.gz",
@@ -8957,28 +8957,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CfKqG82QFfXL+Q2mXLCnEWxCJgLJ+RXoP92YSamL1wk=\""
+          "Value": "\"6/SLGzMcRZzSvKMFSp4kqMuQHGRFH1GUD0VDTdFTpS4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 12:01:28 GMT"
+          "Value": "Tue, 11 Mar 2025 13:00:05 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CfKqG82QFfXL+Q2mXLCnEWxCJgLJ+RXoP92YSamL1wk="
+          "Value": "sha256-6/SLGzMcRZzSvKMFSp4kqMuQHGRFH1GUD0VDTdFTpS4="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-jlf425vyae.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-xda65f1fj2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000113071009"
+          "Quality": "0.000113007119"
         }
       ],
       "ResponseHeaders": [
@@ -8996,15 +8996,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8843"
+          "Value": "8848"
         },
         {
           "Name": "ETag",
-          "Value": "\"Y+CJwDZ4ChpRW1NNiz434SQGUz2dK7hlQY7fQupJjPo=\""
+          "Value": "\"B5mZWXJDguc1tRn4lJoaveTZ+MKDPY0pPb0RDj2bh3A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:17 GMT"
+          "Value": "Tue, 11 Mar 2025 12:45:12 GMT"
         },
         {
           "Name": "Vary",
@@ -9016,19 +9016,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CfKqG82QFfXL+Q2mXLCnEWxCJgLJ+RXoP92YSamL1wk=\""
+          "Value": "W/\"6/SLGzMcRZzSvKMFSp4kqMuQHGRFH1GUD0VDTdFTpS4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CfKqG82QFfXL+Q2mXLCnEWxCJgLJ+RXoP92YSamL1wk="
+          "Value": "sha256-6/SLGzMcRZzSvKMFSp4kqMuQHGRFH1GUD0VDTdFTpS4="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-jlf425vyae.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\5jzqasczcu-xda65f1fj2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9045,7 +9045,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8843"
+          "Value": "8848"
         },
         {
           "Name": "Content-Type",
@@ -9053,11 +9053,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y+CJwDZ4ChpRW1NNiz434SQGUz2dK7hlQY7fQupJjPo=\""
+          "Value": "\"B5mZWXJDguc1tRn4lJoaveTZ+MKDPY0pPb0RDj2bh3A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:17 GMT"
+          "Value": "Tue, 11 Mar 2025 12:45:12 GMT"
         },
         {
           "Name": "Vary",
@@ -9067,7 +9067,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y+CJwDZ4ChpRW1NNiz434SQGUz2dK7hlQY7fQupJjPo="
+          "Value": "sha256-B5mZWXJDguc1tRn4lJoaveTZ+MKDPY0pPb0RDj2bh3A="
         }
       ]
     },
@@ -9223,7 +9223,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34816"
+          "Value": "32768"
         },
         {
           "Name": "Content-Type",
@@ -9231,28 +9231,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SfmEGglCaQmGbiyyrDzO9FnUBS43+Q2kS/HaBAlb0rg=\""
+          "Value": "\"R95eEGyIbdAWgdKb607d/DNzHDECvdZuMzKG6zVShUI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 13:00:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SfmEGglCaQmGbiyyrDzO9FnUBS43+Q2kS/HaBAlb0rg="
+          "Value": "sha256-R95eEGyIbdAWgdKb607d/DNzHDECvdZuMzKG6zVShUI="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp1.dll",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-n0iib8ly62.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-z9ugt1wkud.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000067893272"
+          "Quality": "0.000062920783"
         }
       ],
       "ResponseHeaders": [
@@ -9270,15 +9270,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14728"
+          "Value": "15892"
         },
         {
           "Name": "ETag",
-          "Value": "\"yU2gC06z7dtV45VYtgOcWacdM9kzCElSG8kYmMD0Qb4=\""
+          "Value": "\"aEB53ohkyRP8vT+zGcxkcou9CgPX6p3q1OnlmT26J7s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:30 GMT"
         },
         {
           "Name": "Vary",
@@ -9290,19 +9290,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SfmEGglCaQmGbiyyrDzO9FnUBS43+Q2kS/HaBAlb0rg=\""
+          "Value": "W/\"R95eEGyIbdAWgdKb607d/DNzHDECvdZuMzKG6zVShUI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SfmEGglCaQmGbiyyrDzO9FnUBS43+Q2kS/HaBAlb0rg="
+          "Value": "sha256-R95eEGyIbdAWgdKb607d/DNzHDECvdZuMzKG6zVShUI="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp1.dll.gz",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-n0iib8ly62.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\zar4mxn1lj-z9ugt1wkud.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9319,7 +9319,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14728"
+          "Value": "15892"
         },
         {
           "Name": "Content-Type",
@@ -9327,11 +9327,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yU2gC06z7dtV45VYtgOcWacdM9kzCElSG8kYmMD0Qb4=\""
+          "Value": "\"aEB53ohkyRP8vT+zGcxkcou9CgPX6p3q1OnlmT26J7s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:30 GMT"
         },
         {
           "Name": "Vary",
@@ -9341,7 +9341,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yU2gC06z7dtV45VYtgOcWacdM9kzCElSG8kYmMD0Qb4="
+          "Value": "sha256-aEB53ohkyRP8vT+zGcxkcou9CgPX6p3q1OnlmT26J7s="
         }
       ]
     },
@@ -9360,7 +9360,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "27884"
+          "Value": "27660"
         },
         {
           "Name": "Content-Type",
@@ -9368,28 +9368,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EzZQ9axnj5uVCHH+XSmb2Fq37ZexsWDi5P4DplyA1oI=\""
+          "Value": "\"4x22c40Zqn/qzpIkM5GmSvGi0EJlQcFda53a8hxeVJs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 13:00:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EzZQ9axnj5uVCHH+XSmb2Fq37ZexsWDi5P4DplyA1oI="
+          "Value": "sha256-4x22c40Zqn/qzpIkM5GmSvGi0EJlQcFda53a8hxeVJs="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp1.pdb",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-ly100clrvt.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-tctmsaasoh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000050916497"
+          "Quality": "0.000045148765"
         }
       ],
       "ResponseHeaders": [
@@ -9407,15 +9407,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19639"
+          "Value": "22148"
         },
         {
           "Name": "ETag",
-          "Value": "\"xPnAhVsfErxrjhRQXSYqEUaqTrCi3KOCSzGq3SfNpAY=\""
+          "Value": "\"d7M4OHbzWEYVwVT3WXqd1jWW9JrgqdXG1dzuan04oEU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:30 GMT"
         },
         {
           "Name": "Vary",
@@ -9427,19 +9427,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EzZQ9axnj5uVCHH+XSmb2Fq37ZexsWDi5P4DplyA1oI=\""
+          "Value": "W/\"4x22c40Zqn/qzpIkM5GmSvGi0EJlQcFda53a8hxeVJs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EzZQ9axnj5uVCHH+XSmb2Fq37ZexsWDi5P4DplyA1oI="
+          "Value": "sha256-4x22c40Zqn/qzpIkM5GmSvGi0EJlQcFda53a8hxeVJs="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp1.pdb.gz",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-ly100clrvt.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\kyjy2iuvp1-tctmsaasoh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9456,7 +9456,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19639"
+          "Value": "22148"
         },
         {
           "Name": "Content-Type",
@@ -9464,11 +9464,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xPnAhVsfErxrjhRQXSYqEUaqTrCi3KOCSzGq3SfNpAY=\""
+          "Value": "\"d7M4OHbzWEYVwVT3WXqd1jWW9JrgqdXG1dzuan04oEU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:59:10 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:30 GMT"
         },
         {
           "Name": "Vary",
@@ -9478,7 +9478,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xPnAhVsfErxrjhRQXSYqEUaqTrCi3KOCSzGq3SfNpAY="
+          "Value": "sha256-d7M4OHbzWEYVwVT3WXqd1jWW9JrgqdXG1dzuan04oEU="
         }
       ]
     },
@@ -14437,28 +14437,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WSJURMh14Dfdt6ebft4zL/lKYg9nlF2FICLnVaF8DPc=\""
+          "Value": "\"cTz8TIt3di9QUFUNVWUE9cRvMcbnAey3S6I3YhL1fQA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WSJURMh14Dfdt6ebft4zL/lKYg9nlF2FICLnVaF8DPc="
+          "Value": "sha256-cTz8TIt3di9QUFUNVWUE9cRvMcbnAey3S6I3YhL1fQA="
         }
       ]
     },
     {
       "Route": "_framework/shared.dll",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-jxnywgpxyd.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-tpluri3rhl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000313283208"
+          "Quality": "0.000313479624"
         }
       ],
       "ResponseHeaders": [
@@ -14476,15 +14476,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3191"
+          "Value": "3189"
         },
         {
           "Name": "ETag",
-          "Value": "\"5UtljDXKPk+X/iKMdv5ZDtSpVMsaTOOqRTzWp4zRkOU=\""
+          "Value": "\"KaPdZtsVHNNpj1VlAr52wXe5UI8eEDoE8SQI2sBBTJM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         },
         {
           "Name": "Vary",
@@ -14496,19 +14496,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"WSJURMh14Dfdt6ebft4zL/lKYg9nlF2FICLnVaF8DPc=\""
+          "Value": "W/\"cTz8TIt3di9QUFUNVWUE9cRvMcbnAey3S6I3YhL1fQA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WSJURMh14Dfdt6ebft4zL/lKYg9nlF2FICLnVaF8DPc="
+          "Value": "sha256-cTz8TIt3di9QUFUNVWUE9cRvMcbnAey3S6I3YhL1fQA="
         }
       ]
     },
     {
       "Route": "_framework/shared.dll.gz",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-jxnywgpxyd.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\p56w2bt1fm-tpluri3rhl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14525,7 +14525,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3191"
+          "Value": "3189"
         },
         {
           "Name": "Content-Type",
@@ -14533,11 +14533,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5UtljDXKPk+X/iKMdv5ZDtSpVMsaTOOqRTzWp4zRkOU=\""
+          "Value": "\"KaPdZtsVHNNpj1VlAr52wXe5UI8eEDoE8SQI2sBBTJM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         },
         {
           "Name": "Vary",
@@ -14547,7 +14547,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5UtljDXKPk+X/iKMdv5ZDtSpVMsaTOOqRTzWp4zRkOU="
+          "Value": "sha256-KaPdZtsVHNNpj1VlAr52wXe5UI8eEDoE8SQI2sBBTJM="
         }
       ]
     },
@@ -14574,28 +14574,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w1DvBZlpt5TfMrgC+tkyNbb4qKH80z27TkhyI0uJjEU=\""
+          "Value": "\"sMzSKryhazXxqNsMbKw8cKc86uRKzaex4obCWAdzneI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w1DvBZlpt5TfMrgC+tkyNbb4qKH80z27TkhyI0uJjEU="
+          "Value": "sha256-sMzSKryhazXxqNsMbKw8cKc86uRKzaex4obCWAdzneI="
         }
       ]
     },
     {
       "Route": "_framework/shared.pdb",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-t4t312pufv.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-kzht7fre70.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000146993973"
+          "Quality": "0.000146972369"
         }
       ],
       "ResponseHeaders": [
@@ -14613,15 +14613,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6802"
+          "Value": "6803"
         },
         {
           "Name": "ETag",
-          "Value": "\"tY/DK2gCx4J/zPwmwB8CNYC7foG1ntC3Vmm3uQzRO4U=\""
+          "Value": "\"UuAIEkt4813tPjYXuyrkOclEO2mya1TP+27hC4CWTKc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         },
         {
           "Name": "Vary",
@@ -14633,19 +14633,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"w1DvBZlpt5TfMrgC+tkyNbb4qKH80z27TkhyI0uJjEU=\""
+          "Value": "W/\"sMzSKryhazXxqNsMbKw8cKc86uRKzaex4obCWAdzneI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w1DvBZlpt5TfMrgC+tkyNbb4qKH80z27TkhyI0uJjEU="
+          "Value": "sha256-sMzSKryhazXxqNsMbKw8cKc86uRKzaex4obCWAdzneI="
         }
       ]
     },
     {
       "Route": "_framework/shared.pdb.gz",
-      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-t4t312pufv.gz",
+      "AssetFile": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\obj\\Debug\\net7.0\\compressed\\bey0qyhru7-kzht7fre70.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14662,7 +14662,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6802"
+          "Value": "6803"
         },
         {
           "Name": "Content-Type",
@@ -14670,11 +14670,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tY/DK2gCx4J/zPwmwB8CNYC7foG1ntC3Vmm3uQzRO4U=\""
+          "Value": "\"UuAIEkt4813tPjYXuyrkOclEO2mya1TP+27hC4CWTKc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 11:49:21 GMT"
+          "Value": "Tue, 11 Mar 2025 12:43:24 GMT"
         },
         {
           "Name": "Vary",
@@ -14684,7 +14684,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tY/DK2gCx4J/zPwmwB8CNYC7foG1ntC3Vmm3uQzRO4U="
+          "Value": "sha256-UuAIEkt4813tPjYXuyrkOclEO2mya1TP+27hC4CWTKc="
         }
       ]
     },

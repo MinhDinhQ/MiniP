@@ -75,3 +75,28 @@ Web-api/obj/
 Web-api/bin/
 shared/obj/
 shared/bin/
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore SQLite database (if not needed in Git)
+reddit.db
+reddit.db-shm
+reddit.db-wal
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.user
+*.suo
+*.cache
+*.log
+
+# Ignore Blazor auto-generated files
+Blazor-app/obj/
+Blazor-app/bin/
+Web-api/obj/
+Web-api/bin/
+shared/obj/
+shared/bin/

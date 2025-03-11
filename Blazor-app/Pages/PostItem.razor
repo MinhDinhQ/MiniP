@@ -1,12 +1,8 @@
-﻿<!-- 
-Notice how this route has a route parameter 'id'. This is how we can pass data to the route.
-See how the links are made in 'PostList.razor'.
--->
-@page "/post/{id}"
-
+﻿@page "/post/{id}"
 @using kreddit_app.Data;
 @using shared.Model;
 @inject ApiService apiService
+@inject NavigationManager Navigation;
 
 <PageTitle>Kreddit</PageTitle>
 
@@ -33,29 +29,37 @@ else
     </div>
 
     <div class="contents">
-    <h4>Comments</h4>
-    <table>
-        <tr>
-            <th>User</th>
-            <th>Comment</th>
-            <th colspan="3">Votes</th>
-        </tr>
-        @foreach (var comment in Post.Comments)
+        <h4>Comments</h4>
+        @if (Post.Comments != null && Post.Comments.Any())
         {
-            <tr>
-                <td>@comment.User.Username</td>
-                <td>@comment.Content</td>
-                <td>@(comment.Upvotes - comment.Downvotes)</td>
-                <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
-                <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
-            </tr>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Comment</th>
+                    <th colspan="3">Votes</th>
+                </tr>
+                @foreach (var comment in Post.Comments)
+                {
+                    <tr>
+                        <td>@comment.User.Username</td>
+                        <td>@comment.Content</td>
+                        <td>@(comment.Upvotes - comment.Downvotes)</td>
+                        <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
+                        <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
+                    </tr>
+                }
+            </table>
         }
-    </table>
+        else
+        {
+            <p>No comments available.</p>
+        }
     </div>
 
-    <!-- This demonstrates how to pass in PostId to the component 'CreateComment'. See how 
-         it is used in the file CreateComment.razor -->
-    <CreateComment PostId=@PostId></CreateComment>
+    <CreateComment PostId="@PostId" OnCommentCreated="HandleCommentCreated"></CreateComment>
+    
+    <!-- Home button to navigate back to the homepage -->
+    <button @onclick="NavigateToHome">Go to Home</button>  <!-- Home button -->
 }
 
 @code {
@@ -66,8 +70,27 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Post = await apiService.GetPost(PostId);
+        try
+        {
+            // Hent posten
+            Post = await apiService.GetPost(PostId);
+
+            // Hent kommentarer for posten, hvis posten findes
+            if (Post != null)
+            {
+                Post.Comments = Post.Comments ?? new List<Comment>(); // Sikre at Comments ikke er null
+            }
+            else
+            {
+                Console.WriteLine("Post not found!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
+
     private async void Upvote(int id)
     {
         Console.WriteLine("Not implemented 😪");
@@ -76,5 +99,19 @@ else
     private async void Downvote(int id)
     {
         Console.WriteLine("Not implemented 😪");
+    }
+
+    private void NavigateToHome()
+    {
+        Navigation.NavigateTo("/");
+    }
+
+    // Denne metode håndterer den nye kommentar og opdaterer kommentarlisten
+    private void HandleCommentCreated(Comment newComment)
+    {
+        if (Post != null && Post.Comments != null)
+        {
+            Post.Comments.Add(newComment);  // Tilføj den nye kommentar til listen
+        }
     }
 }

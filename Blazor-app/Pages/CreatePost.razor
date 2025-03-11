@@ -32,7 +32,8 @@
 }
 
 @code {
-    private Post newPost = new Post();
+    
+    private Post newPost = new Post { User = new User("Mads") };
     private bool isPostCreated = false;
 
     // Method called on form submission when the form is valid

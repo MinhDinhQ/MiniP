@@ -90,31 +90,67 @@ public class ApiService
 
 
     // Create a new comment for a post
-    public async Task<Comment> CreateComment(string content, int postId, string username)
+public async Task<Comment> CreateComment(string content, int postId, string username)
+{
+    try
     {
-        try
+        // Skift URL'en til at matche serverens rute med postId som en del af URL'en
+        string url = $"{_baseAPI}posts/{postId}/comments";  // Tilføj postId til URL'en
+
+        // Opret User-objekt baseret på det username, der sendes med
+        User user = new User { Username = username };
+
+        // Send kommentarens data som JSON, herunder User og Content
+        HttpResponseMessage msg = await _http.PostAsJsonAsync(url, new { Content = content, User = user });
+
+        // Tjek responsen
+        if (msg.IsSuccessStatusCode)
         {
-            string url = $"{_baseAPI}comments";  // URL to create a new comment
-
-            // Send the comment data as JSON
-            HttpResponseMessage msg = await _http.PostAsJsonAsync(url, new { Content = content, PostId = postId, Username = username });
-
-            // Check response
-            if (msg.IsSuccessStatusCode)
-            {
-                return await msg.Content.ReadFromJsonAsync<Comment>();
-            }
-            else
-            {
-                throw new Exception("Error creating comment");
-            }
+            // Hvis responsen er succesfuld, returner den oprettede kommentar
+            return await msg.Content.ReadFromJsonAsync<Comment>();
         }
-        catch (Exception ex)
+        else
         {
-            LogError("Error creating comment", ex);
-            throw new ApplicationException($"Error creating comment: {ex.Message}", ex);
+            // Hvis noget gik galt, læs fejlmeddelelsen og kast en undtagelse
+            string errorContent = await msg.Content.ReadAsStringAsync();
+            throw new Exception($"Error creating comment: {errorContent}");
         }
     }
+    catch (Exception ex)
+    {
+        // Log fejl og kast en applikationsfejl
+        LogError("Error creating comment", ex);
+        throw new ApplicationException($"Error creating comment: {ex.Message}", ex);
+    }
+}
+
+// Get comments for a specific post
+public async Task<List<Comment>> GetCommentsForPost(int postId)
+{
+    try
+    {
+        string url = $"{_baseAPI}posts/{postId}/comments";  // URL for at hente kommentarer
+
+        HttpResponseMessage msg = await _http.GetAsync(url);
+
+        if (msg.IsSuccessStatusCode)
+        {
+            return await msg.Content.ReadFromJsonAsync<List<Comment>>();  // Hent kommentarer som en liste
+        }
+        else
+        {
+            string errorContent = await msg.Content.ReadAsStringAsync();
+            throw new Exception($"Error fetching comments: {errorContent}");
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError("Error fetching comments", ex);
+        throw new ApplicationException($"Error fetching comments: {ex.Message}", ex);
+    }
+}
+
+
 
     // Upvote a post
     public async Task<Post> UpvotePost(int id)

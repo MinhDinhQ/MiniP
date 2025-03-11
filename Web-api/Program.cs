@@ -58,7 +58,8 @@ app.MapGet("/posts/{id}", async (int id, RedditDbContext db) =>
 {
     var post = await db.Posts
         .Include(p => p.User)
-        .Include(p => p.Comments)
+        .Include(p => p.Comments) // Hent kommentarer sammen med posten
+        .ThenInclude(c => c.User) // Hvis du også vil hente brugerdata for kommentarer
         .FirstOrDefaultAsync(p => p.Id == id);
 
     if (post == null)
@@ -67,6 +68,7 @@ app.MapGet("/posts/{id}", async (int id, RedditDbContext db) =>
     return Results.Ok(post);
 });
 
+
 app.MapPost("/posts", async (Post post, RedditDbContext db) =>
 {
     db.Posts.Add(post);
@@ -74,7 +76,7 @@ app.MapPost("/posts", async (Post post, RedditDbContext db) =>
     return Results.Created($"/posts/{post.Id}", post);
 });
 
-app.MapPost("/comments", async (Comment comment, int postId, RedditDbContext db) =>
+app.MapPost("/posts/{postId}/comments", async (Comment comment, int postId, RedditDbContext db) =>
 {
     var post = await db.Posts.FindAsync(postId);
     if (post == null)
@@ -84,6 +86,22 @@ app.MapPost("/comments", async (Comment comment, int postId, RedditDbContext db)
     await db.SaveChangesAsync();
     return Results.Created($"/posts/{postId}/comments/{comment.Id}", comment);
 });
+
+// Hent kommentarer for et bestemt post
+app.MapGet("/posts/{postId}/comments", async (int postId, RedditDbContext db) =>
+{
+    var post = await db.Posts
+        .Include(p => p.Comments)  // Sørg for at inkludere kommentarer
+        .FirstOrDefaultAsync(p => p.Id == postId);
+
+    if (post == null)
+        return Results.NotFound();
+
+    // Returner kommentarer til det valgte indlæg
+    return Results.Ok(post.Comments);
+});
+
+
 
 app.MapPost("/posts/{id}/upvote", async (int id, RedditDbContext db) =>
 {

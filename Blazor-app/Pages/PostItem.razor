@@ -56,7 +56,7 @@ else
         }
     </div>
 
-    <CreateComment PostId="@PostId"></CreateComment>
+    <CreateComment PostId="@PostId" OnCommentCreated="HandleCommentCreated"></CreateComment>
     
     <!-- Home button to navigate back to the homepage -->
     <button @onclick="NavigateToHome">Go to Home</button>  <!-- Home button -->
@@ -104,5 +104,14 @@ else
     private void NavigateToHome()
     {
         Navigation.NavigateTo("/");
+    }
+
+    // Denne metode håndterer den nye kommentar og opdaterer kommentarlisten
+    private void HandleCommentCreated(Comment newComment)
+    {
+        if (Post != null && Post.Comments != null)
+        {
+            Post.Comments.Add(newComment);  // Tilføj den nye kommentar til listen
+        }
     }
 }

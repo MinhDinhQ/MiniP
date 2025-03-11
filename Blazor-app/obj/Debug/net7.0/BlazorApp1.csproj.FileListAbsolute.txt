@@ -2519,3 +2519,8 @@ C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\kyjy2iuvp1-hin0kaf0pl.gz
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\5jzqasczcu-10q2ct4r6n.gz
 >>>>>>> Gio
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\p56w2bt1fm-hyj91wu2wo.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\bey0qyhru7-qqazcae03d.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\zar4mxn1lj-uq9ywev8aa.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\kyjy2iuvp1-mz47p9yr02.gz
+C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\obj\Debug\net7.0\compressed\5jzqasczcu-hywhgh4kj7.gz

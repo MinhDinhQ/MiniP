@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-api\\Mini-Projekt.csproj": {}
+    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-APi\\Mini-Projekt.csproj": {}
   },
   "projects": {
     "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Blazor-app\\BlazorApp1.csproj": {
@@ -194,14 +194,14 @@
         }
       }
     },
-    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-api\\Mini-Projekt.csproj": {
+    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-APi\\Mini-Projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-api\\Mini-Projekt.csproj",
+        "projectUniqueName": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-APi\\Mini-Projekt.csproj",
         "projectName": "Mini-Projekt",
-        "projectPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-api\\Mini-Projekt.csproj",
+        "projectPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-APi\\Mini-Projekt.csproj",
         "packagesPath": "C:\\Users\\giobe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-api\\obj\\",
+        "outputPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\Web-APi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d3bd00cd228cc0167b4cbc3c7139b639a34af28")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+993238db9ca0cc3367605d7409ffdab323d2ad88")]
->>>>>>> Gio
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80c445f4b57f3b5767b85a2b9852613d516f2503")]
 [assembly: System.Reflection.AssemblyProductAttribute("shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

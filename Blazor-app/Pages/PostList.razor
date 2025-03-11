@@ -14,12 +14,11 @@ else
             <th>Title</th>
             <th>Content</th>
             <th>Votes</th>
-            <th>Actions</th>
         </tr>
         @foreach (var post in posts)
         {
             <tr>
-                <!-- These a href links will match the route in the page 'PostItem.razor'. -->
+               
                 <td><a href="/post/@post.Id">@post.Title</a></td>
                 <td>@post.Content</td>
                 <td>@(post.Upvotes - post.Downvotes)</td>
@@ -44,14 +43,13 @@ else
 
     private async void Upvote(int id)
     {
-        // Opdater posten med upvote
+   
         var updatedPost = await apiService.UpvotePost(id);
 
-        // Opdater den specifikke post i posts arrayet
         var post = posts?.FirstOrDefault(p => p.Id == id);
         if (post != null)
         {
-            post.Upvotes = updatedPost.Upvotes; // Opdater upvotes
+            post.Upvotes = updatedPost.Upvotes; 
         }
     }
 
@@ -59,14 +57,14 @@ else
 {
     try
     {
-        // Call API to downvote the post
+        
         var updatedPost = await apiService.DownvotePost(id);
 
-        // Update the specific post in the posts list
+       
         var post = posts?.FirstOrDefault(p => p.Id == id);
         if (post != null)
         {
-            post.Downvotes = updatedPost.Downvotes; // Update downvotes count
+            post.Downvotes = updatedPost.Downvotes; 
         }
     }
     catch (Exception ex)

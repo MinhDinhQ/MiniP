@@ -36,15 +36,13 @@
     private Post newPost = new Post { User = new User("Mads") };
     private bool isPostCreated = false;
 
-    // Method called on form submission when the form is valid
-    private async Task HandleValidSubmit()
+       private async Task HandleValidSubmit()
     {
         try
         {
-            var createdPost = await apiService.CreatePost(newPost); // Create the post via ApiService
+            var createdPost = await apiService.CreatePost(newPost); 
             isPostCreated = true;
-            // Optionally redirect to another page, e.g., home or post details
-            // NavigationManager.NavigateTo("/");
+            
         }
         catch (Exception ex)
         {

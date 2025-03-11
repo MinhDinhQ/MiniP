@@ -10,7 +10,7 @@ public class ApiService
     private readonly IConfiguration _configuration;
     private readonly string _baseAPI;
 
-    // Constructor to initialize HttpClient and configuration
+  
     public ApiService(HttpClient http, IConfiguration configuration)
     {
         _http = http;
@@ -23,7 +23,7 @@ public class ApiService
         Console.WriteLine($"{message}: {ex.Message}");
     }
 
-    // Get all posts
+    
     public async Task<Post[]> GetPosts()
     {
         try
@@ -47,7 +47,7 @@ public class ApiService
         }
     }
 
-    // Get a specific post by ID
+  
     public async Task<Post?> GetPost(int id)
     {
         try
@@ -62,14 +62,14 @@ public class ApiService
         }
     }
 
-    // Create a post
+   
     public async Task<Post> CreatePost(Post newPost)
 {
     try
     {
         string url = $"{_baseAPI}posts";  
 
-        // Send data som JSON til API'et
+        
         var response = await _http.PostAsJsonAsync(url, newPost);
 
         if (response.IsSuccessStatusCode)
@@ -89,53 +89,51 @@ public class ApiService
 }
 
 
-    // Create a new comment for a post
+ 
 public async Task<Comment> CreateComment(string content, int postId, string username)
 {
     try
     {
-        // Skift URL'en til at matche serverens rute med postId som en del af URL'en
-        string url = $"{_baseAPI}posts/{postId}/comments";  // Tilføj postId til URL'en
+      
+        string url = $"{_baseAPI}posts/{postId}/comments";  
 
-        // Opret User-objekt baseret på det username, der sendes med
+       
         User user = new User { Username = username };
 
-        // Send kommentarens data som JSON, herunder User og Content
         HttpResponseMessage msg = await _http.PostAsJsonAsync(url, new { Content = content, User = user });
 
-        // Tjek responsen
+   
         if (msg.IsSuccessStatusCode)
         {
-            // Hvis responsen er succesfuld, returner den oprettede kommentar
+           
             return await msg.Content.ReadFromJsonAsync<Comment>();
         }
         else
         {
-            // Hvis noget gik galt, læs fejlmeddelelsen og kast en undtagelse
+            
             string errorContent = await msg.Content.ReadAsStringAsync();
             throw new Exception($"Error creating comment: {errorContent}");
         }
     }
     catch (Exception ex)
     {
-        // Log fejl og kast en applikationsfejl
+       
         LogError("Error creating comment", ex);
         throw new ApplicationException($"Error creating comment: {ex.Message}", ex);
     }
 }
 
-// Get comments for a specific post
 public async Task<List<Comment>> GetCommentsForPost(int postId)
 {
     try
     {
-        string url = $"{_baseAPI}posts/{postId}/comments";  // URL for at hente kommentarer
+        string url = $"{_baseAPI}posts/{postId}/comments"; 
 
         HttpResponseMessage msg = await _http.GetAsync(url);
 
         if (msg.IsSuccessStatusCode)
         {
-            return await msg.Content.ReadFromJsonAsync<List<Comment>>();  // Hent kommentarer som en liste
+            return await msg.Content.ReadFromJsonAsync<List<Comment>>(); 
         }
         else
         {
@@ -152,7 +150,7 @@ public async Task<List<Comment>> GetCommentsForPost(int postId)
 
 
 
-    // Upvote a post
+
     public async Task<Post> UpvotePost(int id)
     {
         try
@@ -176,12 +174,12 @@ public async Task<List<Comment>> GetCommentsForPost(int postId)
         }
     }
 
-    // Downvote a post
+ 
    public async Task<Post> DownvotePost(int id)
 {
     try
     {
-        string url = $"{_baseAPI}posts/{id}/downvote";    // Adjusted URL if needed
+        string url = $"{_baseAPI}posts/{id}/downvote";    
        var response = await _http.PostAsJsonAsync(url, "");
 
 

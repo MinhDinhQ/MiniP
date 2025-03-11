@@ -13,24 +13,23 @@
 
 @code {
     [Parameter]
-    public int PostId { get; set; }  // Modtag PostId som parameter
+    public int PostId { get; set; }  
 
     [Parameter]
-    public EventCallback<Comment> OnCommentCreated { get; set; }  // Callback til at sende den nye kommentar tilbage
-
+    public EventCallback<Comment> OnCommentCreated { get; set; }
     private string? content;
 
     private async Task CreateNewComment()
     {
         if (string.IsNullOrWhiteSpace(content))
         {
-            return;  // Hvis indholdet er tomt, gør vi ikke noget
+            return;  
         }
 
-        // Opret kommentar
+      
         var newComment = await apiService.CreateComment(content, PostId, "Kasper");
 
-        // Send den nye kommentar til PostItem-komponenten
+        
         if (newComment != null)
         {
             await OnCommentCreated.InvokeAsync(newComment);

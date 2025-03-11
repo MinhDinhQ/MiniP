@@ -8,26 +8,26 @@ using Microsoft.AspNetCore.Http.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ** Add services to the container. **
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add DbContext for RedditDbContext
-builder.Services.AddDbContext<RedditDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))); // SQLite connection string
 
-// Configure CORS policy
+builder.Services.AddDbContext<RedditDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))); 
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorOrigin", policy =>
     {
-        policy.WithOrigins("http://localhost:7228")  // Blazor client address
+        policy.WithOrigins("http://localhost:7228")  
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
-// Configure JSON options to avoid circular references
+
 builder.Services.Configure<JsonOptions>(options =>
 {
     options.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
@@ -35,7 +35,7 @@ builder.Services.Configure<JsonOptions>(options =>
 
 var app = builder.Build();
 
-// Use CORS policy
+
 app.UseCors("AllowBlazorOrigin");
 
 app.Use(async (context, next) =>
@@ -44,7 +44,7 @@ app.Use(async (context, next) =>
     await next(context);
 });
 
-// Define API routes (Minimal API)
+
 app.MapGet("/posts", async (RedditDbContext db) =>
 {
     var posts = await db.Posts
@@ -58,8 +58,8 @@ app.MapGet("/posts/{id}", async (int id, RedditDbContext db) =>
 {
     var post = await db.Posts
         .Include(p => p.User)
-        .Include(p => p.Comments) // Hent kommentarer sammen med posten
-        .ThenInclude(c => c.User) // Hvis du også vil hente brugerdata for kommentarer
+        .Include(p => p.Comments) 
+        .ThenInclude(c => c.User)
         .FirstOrDefaultAsync(p => p.Id == id);
 
     if (post == null)
@@ -87,17 +87,16 @@ app.MapPost("/posts/{postId}/comments", async (Comment comment, int postId, Redd
     return Results.Created($"/posts/{postId}/comments/{comment.Id}", comment);
 });
 
-// Hent kommentarer for et bestemt post
 app.MapGet("/posts/{postId}/comments", async (int postId, RedditDbContext db) =>
 {
     var post = await db.Posts
-        .Include(p => p.Comments)  // Sørg for at inkludere kommentarer
+        .Include(p => p.Comments)  
         .FirstOrDefaultAsync(p => p.Id == postId);
 
     if (post == null)
         return Results.NotFound();
 
-    // Returner kommentarer til det valgte indlæg
+    
     return Results.Ok(post.Comments);
 });
 
@@ -147,7 +146,7 @@ app.MapPost("/comments/{id}/downvote", async (int id, RedditDbContext db) =>
     return Results.Ok(comment);
 });
 
-// ** Configure the HTTP request pipeline. **
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

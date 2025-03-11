@@ -74,7 +74,7 @@ app.MapPost("/posts", async (Post post, RedditDbContext db) =>
     return Results.Created($"/posts/{post.Id}", post);
 });
 
-app.MapPost("/comments", async (Comment comment, int postId, RedditDbContext db) =>
+app.MapPost("/posts/{postId}/comments", async (Comment comment, int postId, RedditDbContext db) =>
 {
     var post = await db.Posts.FindAsync(postId);
     if (post == null)
@@ -84,6 +84,7 @@ app.MapPost("/comments", async (Comment comment, int postId, RedditDbContext db)
     await db.SaveChangesAsync();
     return Results.Created($"/posts/{postId}/comments/{comment.Id}", comment);
 });
+
 
 app.MapPost("/posts/{id}/upvote", async (int id, RedditDbContext db) =>
 {

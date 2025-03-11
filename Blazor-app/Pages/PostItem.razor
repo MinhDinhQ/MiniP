@@ -1,8 +1,4 @@
-﻿<!-- 
-Notice how this route has a route parameter 'id'. This is how we can pass data to the route.
-See how the links are made in 'PostList.razor'.
--->
-@page "/post/{id}"
+﻿@page "/post/{id}"
 
 @using kreddit_app.Data;
 @using shared.Model;
@@ -53,9 +49,8 @@ else
     </table>
     </div>
 
-    <!-- This demonstrates how to pass in PostId to the component 'CreateComment'. See how 
-         it is used in the file CreateComment.razor -->
-    <CreateComment PostId=@PostId></CreateComment>
+    <!-- Here we are passing the PostId as a parameter to the CreateComment component -->
+    <CreateComment PostId="@PostId"></CreateComment>
 }
 
 @code {
@@ -68,6 +63,7 @@ else
     {
         Post = await apiService.GetPost(PostId);
     }
+
     private async void Upvote(int id)
     {
         Console.WriteLine("Not implemented 😪");

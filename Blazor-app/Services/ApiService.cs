@@ -124,6 +124,32 @@ public async Task<Comment> CreateComment(string content, int postId, string user
     }
 }
 
+// Get comments for a specific post
+public async Task<List<Comment>> GetCommentsForPost(int postId)
+{
+    try
+    {
+        string url = $"{_baseAPI}posts/{postId}/comments";  // URL for at hente kommentarer
+
+        HttpResponseMessage msg = await _http.GetAsync(url);
+
+        if (msg.IsSuccessStatusCode)
+        {
+            return await msg.Content.ReadFromJsonAsync<List<Comment>>();  // Hent kommentarer som en liste
+        }
+        else
+        {
+            string errorContent = await msg.Content.ReadAsStringAsync();
+            throw new Exception($"Error fetching comments: {errorContent}");
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError("Error fetching comments", ex);
+        throw new ApplicationException($"Error fetching comments: {ex.Message}", ex);
+    }
+}
+
 
 
     // Upvote a post

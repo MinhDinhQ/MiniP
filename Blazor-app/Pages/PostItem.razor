@@ -29,24 +29,31 @@ else
     </div>
 
     <div class="contents">
-    <h4>Comments</h4>
-    <table>
-        <tr>
-            <th>User</th>
-            <th>Comment</th>
-            <th colspan="3">Votes</th>
-        </tr>
-        @foreach (var comment in Post.Comments)
+        <h4>Comments</h4>
+        @if (Post.Comments != null && Post.Comments.Any())
         {
-            <tr>
-                <td>@comment.User.Username</td>
-                <td>@comment.Content</td>
-                <td>@(comment.Upvotes - comment.Downvotes)</td>
-                <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
-                <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
-            </tr>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Comment</th>
+                    <th colspan="3">Votes</th>
+                </tr>
+                @foreach (var comment in Post.Comments)
+                {
+                    <tr>
+                        <td>@comment.User.Username</td>
+                        <td>@comment.Content</td>
+                        <td>@(comment.Upvotes - comment.Downvotes)</td>
+                        <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
+                        <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
+                    </tr>
+                }
+            </table>
         }
-    </table>
+        else
+        {
+            <p>No comments available.</p>
+        }
     </div>
 
     <!-- Here we are passing the PostId as a parameter to the CreateComment component -->
@@ -61,7 +68,25 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Post = await apiService.GetPost(PostId);
+        try
+        {
+            // Hent posten
+            Post = await apiService.GetPost(PostId);
+
+            // Hent kommentarer for posten, hvis posten findes
+            if (Post != null)
+            {
+                Post.Comments = Post.Comments ?? new List<Comment>(); // Sikre at Comments ikke er null
+            }
+            else
+            {
+                Console.WriteLine("Post not found!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
 
     private async void Upvote(int id)

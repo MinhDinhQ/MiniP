@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kyts844UguIvPxF/N7VRRnWFmumJpCTOwSh5nE36GZfIjOf/lDVw34q3AsJFwXn6XQR7RkLu1SgF+NBtVjSqtw==",
+  "dgSpecHash": "W7Q7GxA9juRgJhBXQHotUXQREMny5sf9Tdj3BWDN/+FcvqA1n5IwNYL1p3OZPF5e2r85OXJAtNYjMF4r1EdCqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Minh\\Desktop\\Mini-Projekt\\Blazor-app\\BlazorApp1.csproj",
+  "projectFilePath": "C:\\Users\\Minh\\Desktop\\MiniP\\Blazor-app\\BlazorApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Minh\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.20\\microsoft.aspnetcore.authorization.7.0.20.nupkg.sha512",
     "C:\\Users\\Minh\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.20\\microsoft.aspnetcore.components.7.0.20.nupkg.sha512",

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Mini-Projekt\\shared\\shared.csproj",
+      "projectUniqueName": "C:\\Users\\Minh\\Desktop\\MiniP\\shared\\shared.csproj",
       "projectName": "shared",
-      "projectPath": "C:\\Users\\Minh\\Desktop\\Mini-Projekt\\shared\\shared.csproj",
+      "projectPath": "C:\\Users\\Minh\\Desktop\\MiniP\\shared\\shared.csproj",
       "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Minh\\Desktop\\Mini-Projekt\\shared\\obj\\",
+      "outputPath": "C:\\Users\\Minh\\Desktop\\MiniP\\shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config"

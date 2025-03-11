@@ -52,3 +52,26 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore SQLite database (if not needed in Git)
+reddit.db
+
+# Ignore Visual Studio/Rider temp files
+.vscode/
+.idea/
+*.user
+*.suo
+*.cache
+*.log
+
+# Ignore Blazor auto-generated files
+Blazor-app/obj/
+Blazor-app/bin/
+Web-api/obj/
+Web-api/bin/
+shared/obj/
+shared/bin/

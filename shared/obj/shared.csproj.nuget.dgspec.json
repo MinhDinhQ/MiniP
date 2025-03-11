@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\shared.csproj": {}
+    "/Users/tonyxtruong/Desktop/MiniP-1/shared/shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\shared.csproj": {
+    "/Users/tonyxtruong/Desktop/MiniP-1/shared/shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\shared.csproj",
+        "projectUniqueName": "/Users/tonyxtruong/Desktop/MiniP-1/shared/shared.csproj",
         "projectName": "shared",
-        "projectPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\shared.csproj",
-        "packagesPath": "C:\\Users\\giobe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\obj\\",
+        "projectPath": "/Users/tonyxtruong/Desktop/MiniP-1/shared/shared.csproj",
+        "packagesPath": "/Users/tonyxtruong/.nuget/packages/",
+        "outputPath": "/Users/tonyxtruong/Desktop/MiniP-1/shared/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giobe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/tonyxtruong/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -64,15 +51,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.31, 6.0.31]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.31, 6.0.31]"
             }
           ],
           "frameworkReferences": {
@@ -80,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
         }
       }
     }

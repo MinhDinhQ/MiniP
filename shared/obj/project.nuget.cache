@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mnwEdPxQ16k=",
+  "dgSpecHash": "Bt2EEgNBQ5UOQZLMyw8J2o+CidUI3TLkAqbz4j6xeGHqE+CX9TWMYjskeAyyTIIRUAMzQXRIle2derGoqdziGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\giobe\\OneDrive\\Skrivebord\\MiniP\\shared\\shared.csproj",
+  "projectFilePath": "C:\\Users\\Minh\\Desktop\\MiniP-1\\shared\\shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\giobe\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\giobe\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\giobe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+    "C:\\Users\\Minh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\Minh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\Minh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
   ],
   "logs": []
 }

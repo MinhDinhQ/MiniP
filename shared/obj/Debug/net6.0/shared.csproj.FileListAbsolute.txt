@@ -32,3 +32,14 @@ C:\Users\giobe\OneDrive\Skrivebord\MiniP\shared\obj\Debug\net6.0\shared.dll
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\shared\obj\Debug\net6.0\refint\shared.dll
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\shared\obj\Debug\net6.0\shared.pdb
 C:\Users\giobe\OneDrive\Skrivebord\MiniP\shared\obj\Debug\net6.0\ref\shared.dll
+C:\Users\Minh\Desktop\MiniP-1\shared\bin\Debug\net6.0\shared.deps.json
+C:\Users\Minh\Desktop\MiniP-1\shared\bin\Debug\net6.0\shared.dll
+C:\Users\Minh\Desktop\MiniP-1\shared\bin\Debug\net6.0\shared.pdb
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.AssemblyInfoInputs.cache
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.AssemblyInfo.cs
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.csproj.CoreCompileInputs.cache
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.dll
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\refint\shared.dll
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\shared.pdb
+C:\Users\Minh\Desktop\MiniP-1\shared\obj\Debug\net6.0\ref\shared.dll

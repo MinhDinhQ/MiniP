@@ -1,8 +1,4 @@
 is_global = true
-build_property.EnableAotAnalyzer = 
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = false
-build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net7.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -13,45 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = BlazorApp1
 build_property.RootNamespace = BlazorApp1
-build_property.ProjectDir = C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Minh\Desktop\MiniP-1\Blazor-app\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\giobe\OneDrive\Skrivebord\MiniP\Blazor-app
+build_property.MSBuildProjectDirectory = C:\Users\Minh\Desktop\MiniP-1\Blazor-app
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 7.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/App.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Pages/CreatePost.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Pages/CreatePost.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUG9zdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Pages/Index.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Pages/PostItem.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Pages/PostItem.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdEl0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Pages/PostList.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Pages/PostList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdExpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Shared/CreateComment.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Shared/CreateComment.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENyZWF0ZUNvbW1lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/_Imports.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giobe/OneDrive/Skrivebord/MiniP/Blazor-app/Shared/MainLayout.razor]
+[C:/Users/Minh/Desktop/MiniP-1/Blazor-app/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-45rkf8v3vv

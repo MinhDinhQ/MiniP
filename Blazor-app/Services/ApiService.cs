@@ -62,6 +62,33 @@ public class ApiService
         }
     }
 
+    // Create a post
+    public async Task<Post> CreatePost(Post newPost)
+{
+    try
+    {
+        string url = $"{_baseAPI}posts";  
+
+        // Send data som JSON til API'et
+        var response = await _http.PostAsJsonAsync(url, newPost);
+
+        if (response.IsSuccessStatusCode)
+        {
+            return await response.Content.ReadFromJsonAsync<Post>();
+        }
+        else
+        {
+            throw new Exception("Error creating post.");
+        }
+    }
+    catch (Exception ex)
+    {
+        LogError("Error creating post", ex);
+        throw new ApplicationException($"Error creating post: {ex.Message}", ex);
+    }
+}
+
+
     // Create a new comment for a post
     public async Task<Comment> CreateComment(string content, int postId, string username)
     {
@@ -129,25 +156,5 @@ public class ApiService
         }
     }
 
-    // Login user
-    public async Task<User> Login(string username)
-    {
-        try
-        {
-            var response = await _http.PostAsJsonAsync($"{_baseAPI}users/{username}/", "");
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadFromJsonAsync<User>();
-            }
-            else
-            {
-                throw new Exception("Login failed");
-            }
-        }
-        catch (Exception ex)
-        {
-            LogError($"Error logging in user {username}", ex);
-            throw new ApplicationException($"Error logging in user {username}: {ex.Message}", ex);
-        }
-    }
+
 }

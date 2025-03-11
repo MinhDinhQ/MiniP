@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // ** Add CORS Policy **
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin", policy =>
+    options.AddPolicy("AllowBlazorOrigin", policy =>
     {
         policy.WithOrigins("http://localhost:7228")  
               .AllowAnyHeader()

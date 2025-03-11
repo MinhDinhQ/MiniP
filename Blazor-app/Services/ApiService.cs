@@ -16,7 +16,7 @@ public class ApiService
     {
         _http = http;
         _configuration = configuration;
-        _baseAPI = _configuration["base_api"] ?? "http://localhost:5283/api/"; 
+        _baseAPI = _configuration["base_api"] ?? "http://localhost:5283/"; 
     }
 
     private void LogError(string message, Exception ex)
